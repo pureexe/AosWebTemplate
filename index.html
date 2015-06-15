@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<link type="text/css" rel="stylesheet" href="css/app.css"  media="screen,projection"/>
+    	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    </head>
+    <body>
+		<nav class="app">
+			<div class="app-nav-wrapper">
+				<a class="left nav-collapse hide-on-med-and-up" href="#">
+					<i class="mdi-navigation-menu"></i>
+				</a>
+				<a class="header-logo logo-center">
+					<span class="green-text" style="margin-right:0.75rem"><i class="mdi-hardware-desktop-mac"></i></span>name
+				</a>
+				<ul class="left hide-on-small-only">
+					<li><a href="#">menu1</a></li>
+					<li><a href="#">menu2</a></li>
+					<li><a href="#">menu3</a></li>
+				</ul>
+				<div id="searchbox" class="right ">
+					<div style="width:100%;">
+						<input id="searchinput" type="text" placeholder="Search" style="margin-bottom:0px;height: 2rem;" />
+					</div>
+				</div>
+				<div class="right searchicon" style="z-index:1000">
+					<i class="mdi-action-search"></i>
+				</div>
+			</div>
+		</nav>
+    	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    	<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script>
+			$(function() {
+				$(".searchicon").hover(function(){
+					var goWidth = "200px";
+					if($(window).width() <=600){
+						goWidth = ($(window).width() - 128)+"px";
+					}
+					$( "#searchbox" ).animate({
+						width: goWidth,
+						paddingRight:"18px"
+					 }, 300 );
+					$("#searchinput").focus();
+				});
+				$("#searchbox").focusout(function(){
+					$( "#searchbox" ).animate({
+						width: "0px",
+						paddingRight:"0px"
+					 }, 300 );
+				});
+			});
+		</script>
+    </body>
+</html>

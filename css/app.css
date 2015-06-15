@@ -1,0 +1,73 @@
+nav.app {
+	background-color: #FFF;
+	height: 64px;
+	line-height: 64px;
+	webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	-moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	box-shadow: 0 2px 1px 0 rgba(0,0,0,0.04),0 2px 5px 0 rgba(0,0,0,0.01);
+}
+nav.app > div > a{
+	color: #444444;
+}
+nav.app > div > ul{
+	border-left: 1px solid #e5e5e5;
+}
+nav.app > div > a.header-logo{
+	z-index:5;
+	font-size: 1.3rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	float: left;
+}
+
+@media (max-width: 600px) {
+  nav.app > div > a.header-logo.logo-center {
+      left: 50%;
+	  -webkit-transform: translateX(-50%);
+	  -moz-transform: translateX(-50%);
+  	  -ms-transform: translateX(-50%);
+	  -o-transform: translateX(-50%);
+  	  transform: translateX(-50%);
+	    position: absolute;
+  }
+}
+
+nav.app > div > a.nav-collapse{
+	width: 64px;
+	font-size: 1.7rem;
+	padding-left: 1.3rem;
+	padding-right: 1.3rem;
+	line-height: 62px;
+	border-right: 1px solid #e5e5e5;
+	float: left;
+}
+nav.app > div > #searchbox{
+	z-index:10;
+	width:0px;
+	background-color: #fff;
+}
+nav.app > div > div.searchicon{
+		background-color: #fff;
+	z-index:10;
+	width: 64px;
+	font-size: 1.7rem;
+	padding-left: 1.3rem;
+	padding-right: 1.3rem;
+	line-height: 62px;
+	border-left: 1px solid #e5e5e5;
+	float: right;
+}
+nav.app > div > ul > li > a{
+	color: #444444;
+}
+.app-nav-wrapper{
+	box-sizing: border-box;
+	color: #444444;
+	display: block;
+	font-family: Roboto, sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	height: 64px;
+	line-height: 64px;
+	position: relative;
+}
